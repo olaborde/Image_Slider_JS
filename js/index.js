@@ -17,3 +17,13 @@ function showSlides (index){
   slides[SLIDEINDEX].style.display = "block";
   dots[SLIDEINDEX].classList.remove("active-dot");
 }
+
+document.querySelector("#arrow-prev").addEventListener
+("click", function(){
+  showSlides(++SLIDEINDEX);
+})
+
+document.querySelector("#arrow-next").addEventListener
+("click", function(){
+  showSlides(--SLIDEINDEX);
+})
