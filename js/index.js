@@ -27,3 +27,18 @@ document.querySelector("#arrow-next").addEventListener
 ("click", function(){
   showSlides(--SLIDEINDEX);
 })
+
+document.querySelectorAll(".dot-navigation").forEach(function
+(element){
+  element.addEventListener("click", function(){
+    var dots = Array.prototype.slice.call
+    (this.parentElement.children),
+    dotIndex = dots.indexOf(element);
+
+    showSlides(SLIDEINDEX = dotIndex)
+  })
+})
+
+setInterval(function(){
+  showSlides(++SLIDEINDEX)
+}, 10000)
